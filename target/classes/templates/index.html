@@ -68,7 +68,7 @@
 		<br>
 		<br>
 		<br>
-		<div style="border: 1px solid black;" data-ng-show="!controller.chamado">
+		<div style="border: 0px solid black;" data-ng-show="!controller.chamado">
 			<table>
 				<tr>
 					<th width="5%">ID</th>
@@ -98,8 +98,10 @@
 						<button type="button" class="yellow-button" data-ng-click="controller.pesquisar(dadosPessoa)">Selecionar</button>
 					</td>
 				</tr>
+			</table>
+			<table>
 				<tr>
-					<td colspan="10" style="text-align: center"> <button type="button" class="green-button" data-ng-click="controller.novo()">Incluir nova Pessoa</button></td>
+					<td colspan="10" style="text-align: left"> <button type="button" class="green-button" data-ng-click="controller.novo()">Incluir nova Pessoa</button></td>
 				</tr>
 			</table>
 			<br>
