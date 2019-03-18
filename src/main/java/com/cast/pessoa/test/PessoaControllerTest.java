@@ -8,9 +8,28 @@ import java.net.URL;
 import org.junit.Assert;
 import org.junit.Test;
 
+
+
+/**
+ * 
+ * Classe PessoaControllerTest: Realiza teste de unidade
+ *
+ * @author <a href="mailto:hcamposcruz@gmail.com">Hudson de Campos Cruz</a>.
+ * @version $Revision: 1.1 $
+ */
+
+
 public class PessoaControllerTest {
 	
-	
+	/**
+	 * 
+	 * Realiza teste no servico rest/pessoas.
+	 *
+	 * @author <a href="mailto:hcamposcruz@gmail.com">Hudson de Campos Cruz</a>.
+	 * @param Parametro vazio
+	 * @return True or false.
+	 * void
+	 */
 	@Test
 	public void testlistaPessoas() throws IOException {
 		
@@ -31,7 +50,17 @@ public class PessoaControllerTest {
 		}
 		
 	}
+
 	
+	/**
+	 * 
+	 * Realiza teste no servico rest/pessoas/{1}.
+	 *
+	 * @author <a href="mailto:hcamposcruz@gmail.com">Hudson de Campos Cruz</a>.
+	 * @param id
+	 * @return True or false.
+	 * void
+	 */
 	@Test
 	public void testbuscaPessoa() throws IOException {
 		

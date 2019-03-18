@@ -17,48 +17,48 @@
 		<br>
 		<br>
   		
-		<div style="border: 1px solid black;" data-ng-show="controller.chamado">
+		<div style="border: 1px solid black;" data-ng-show="controller.infpessoa">
 			<table style="width:100%">
 				<tr>
 					<td style="width:7%"><label for="idPessoa">ID:</label></td>
-					<td><input type="number" id="idPessoa" data-ng-model="controller.chamado.idPessoa" disabled></td>
+					<td><input type="number" id="idPessoa" data-ng-model="controller.infpessoa.idPessoa" disabled></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="nomPessoa">Nome:</label></td>
-					<td><input size="50" type="text" id="nomPessoa" data-ng-model="controller.chamado.nomPessoa"></td>
+					<td><input size="50" type="text" id="nomPessoa" data-ng-model="controller.infpessoa.nomPessoa"></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endRua">Rua:</label></td>
-					<td><input size="50" type="text" id="endRua" data-ng-model="controller.chamado.endRua"></td>
+					<td><input size="50" type="text" id="endRua" data-ng-model="controller.infpessoa.endRua"></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endNumero">Número:</label></td>
-					<td><input size="5" type="text" id="endNumero" data-ng-model="controller.chamado.endNumero"></td>
+					<td><input size="5" type="text" id="endNumero" data-ng-model="controller.infpessoa.endNumero"></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endBairro">Bairro:</label></td>
-					<td><input size="50" type="text" id="endBairro" data-ng-model="controller.chamado.endBairro"></td>
+					<td><input size="50" type="text" id="endBairro" data-ng-model="controller.infpessoa.endBairro"></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endCidade">Cidade:</label></td>
-					<td><input size="50" type="text" id="endCidade" data-ng-model="controller.chamado.endCidade"></td>
+					<td><input size="50" type="text" id="endCidade" data-ng-model="controller.infpessoa.endCidade"></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endUF">UF:</label></td>
-					<td><input size="5" type="text" id="endUF" data-ng-model="controller.chamado.endUF"></td>
+					<td><input size="5" type="text" id="endUF" data-ng-model="controller.infpessoa.endUF"></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endCelular">Celular:</label></td>
-					<td><input size="30" type="text" id="endCelular" data-ng-model="controller.chamado.endCelular"></td>
+					<td><input size="30" type="text" id="endCelular" data-ng-model="controller.infpessoa.endCelular"></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endTelefone">Telefone:</label></td>
-					<td><input size="30" type="text" id="endTelefone" data-ng-model="controller.chamado.endTelefone"></td>
+					<td><input size="30" type="text" id="endTelefone" data-ng-model="controller.infpessoa.endTelefone"></td>
 				</tr>
 				<tr>
 					<td colspan="2">
 						<button type="button" class="green-green-button" data-ng-click="controller.salvar()">Salvar</button>
-						<button type="button" class="delete-button" data-ng-click="controller.chamado = undefined">Cancelar</button>
+						<button type="button" class="delete-button" data-ng-click="controller.infpessoa = undefined">Cancelar</button>
 					</td>
 				</tr>
 			</table>
@@ -68,7 +68,7 @@
 		<br>
 		<br>
 		<br>
-		<div style="border: 0px solid black;" data-ng-show="!controller.chamado">
+		<div style="border: 0px solid black;" data-ng-show="!controller.infpessoa">
 			<table>
 				<tr>
 					<th width="5%">ID</th>
@@ -82,7 +82,7 @@
 					<th>TELEFONE</th>
 					<th></th>
 				</tr>
-				<tr data-ng-repeat="dadosPessoa in controller.chamados">
+				<tr data-ng-repeat="dadosPessoa in controller.infArrayPessoa">
 					<td>{{dadosPessoa.idPessoa}}</td>
 					<td>{{dadosPessoa.nomPessoa}}</td>
 					<td>{{dadosPessoa.endRua}}</td>
@@ -112,45 +112,45 @@
 		<br>
 		<br>
 
-		<div style="border: 0px solid black;" data-ng-show="controller.chamado2">
+		<div style="border: 0px solid black;" data-ng-show="controller.infPesqPessoa">
 
 			<table style="width:100%">
 				<tr><td colspan="2">Dados da Pessoa Selecionada</td></tr>
 				<tr>
 					<td style="width:7%"><label for="idPessoa">ID:</label></td>
-					<td><input type="number" id="idPessoa" data-ng-model="controller.chamado2.idPessoa" disabled></td>
+					<td><input type="number" id="idPessoa" data-ng-model="controller.infPesqPessoa.idPessoa" disabled></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="nomPessoa">Nome:</label></td>
-					<td><input type="text" id="nomPessoa" data-ng-model="controller.chamado2.nomPessoa" disabled></td>
+					<td><input type="text" id="nomPessoa" data-ng-model="controller.infPesqPessoa.nomPessoa" disabled></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endRua">Rua:</label></td>
-					<td><input type="text" id="endRua" data-ng-model="controller.chamado2.endRua" disabled></td>
+					<td><input type="text" id="endRua" data-ng-model="controller.infPesqPessoa.endRua" disabled></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endNumero">Número:</label></td>
-					<td><input type="text" id="endNumero" data-ng-model="controller.chamado2.endNumero" disabled></td>
+					<td><input type="text" id="endNumero" data-ng-model="controller.infPesqPessoa.endNumero" disabled></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endBairro">Bairro:</label></td>
-					<td><input size="50" type="text" id="endBairro" data-ng-model="controller.chamado2.endBairro" disabled></td>
+					<td><input size="50" type="text" id="endBairro" data-ng-model="controller.infPesqPessoa.endBairro" disabled></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endCidade">Cidade:</label></td>
-					<td><input size="50" type="text" id="endCidade" data-ng-model="controller.chamado2.endCidade" disabled></td>
+					<td><input size="50" type="text" id="endCidade" data-ng-model="controller.infPesqPessoa.endCidade" disabled></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endUF">UF:</label></td>
-					<td><input size="5" type="text" id="endUF" data-ng-model="controller.chamado2.endUF" disabled></td>
+					<td><input size="5" type="text" id="endUF" data-ng-model="controller.infPesqPessoa.endUF" disabled></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endCelular">Celular:</label></td>
-					<td><input size="30" type="text" id="endCelular" data-ng-model="controller.chamado2.endCelular" disabled></td>
+					<td><input size="30" type="text" id="endCelular" data-ng-model="controller.infPesqPessoa.endCelular" disabled></td>
 				</tr>
 				<tr>
 					<td style="width:7%"><label for="endTelefone">Telefone:</label></td>
-					<td><input size="30" type="text" id="endTelefone" data-ng-model="controller.chamado2.endTelefone" disabled></td>
+					<td><input size="30" type="text" id="endTelefone" data-ng-model="controller.infPesqPessoa.endTelefone" disabled></td>
 				</tr>
 				<tr>
 					<td colspan="2">

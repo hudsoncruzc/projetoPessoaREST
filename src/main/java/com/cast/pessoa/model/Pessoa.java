@@ -7,6 +7,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * 
+ * Classe Entity Pessoa
+ *
+ * @author <a href="mailto:hcamposcruz@gmail.com">Hudson de Campos Cruz</a>.
+ */
+
+
 @Entity
 public class Pessoa implements Serializable{
 	

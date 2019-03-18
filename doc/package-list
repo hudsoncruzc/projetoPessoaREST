@@ -1,0 +1,5 @@
+com.cast.pessoa
+com.cast.pessoa.controller
+com.cast.pessoa.model
+com.cast.pessoa.repository
+com.cast.pessoa.test
