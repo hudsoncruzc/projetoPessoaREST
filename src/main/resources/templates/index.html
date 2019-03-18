@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Projeto Pessoa</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script src="js/pessoas.js"></script>
+<link href="style/main.css" rel="stylesheet" />
+</head>
+
+<body data-ng-app="PessoasApp">
+	<div data-ng-controller="PessoaController as controller">
+		<table style="width:100%">
+			<tr><td><h3 align="center">Projeto: {{controller.projeto}}</h3></td></tr>
+		</table>
+			
+		<br>
+		<br>
+  		
+		<div style="border: 1px solid black;" data-ng-show="controller.chamado">
+			<table style="width:100%">
+				<tr>
+					<td style="width:7%"><label for="idPessoa">ID:</label></td>
+					<td><input type="number" id="idPessoa" data-ng-model="controller.chamado.idPessoa" disabled></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="nomPessoa">Nome:</label></td>
+					<td><input size="50" type="text" id="nomPessoa" data-ng-model="controller.chamado.nomPessoa"></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endRua">Rua:</label></td>
+					<td><input size="50" type="text" id="endRua" data-ng-model="controller.chamado.endRua"></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endNumero">Número:</label></td>
+					<td><input size="5" type="text" id="endNumero" data-ng-model="controller.chamado.endNumero"></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endBairro">Bairro:</label></td>
+					<td><input size="50" type="text" id="endBairro" data-ng-model="controller.chamado.endBairro"></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endCidade">Cidade:</label></td>
+					<td><input size="50" type="text" id="endCidade" data-ng-model="controller.chamado.endCidade"></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endUF">UF:</label></td>
+					<td><input size="5" type="text" id="endUF" data-ng-model="controller.chamado.endUF"></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endCelular">Celular:</label></td>
+					<td><input size="30" type="text" id="endCelular" data-ng-model="controller.chamado.endCelular"></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endTelefone">Telefone:</label></td>
+					<td><input size="30" type="text" id="endTelefone" data-ng-model="controller.chamado.endTelefone"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button type="button" class="green-green-button" data-ng-click="controller.salvar()">Salvar</button>
+						<button type="button" class="delete-button" data-ng-click="controller.chamado = undefined">Cancelar</button>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div style="border: 1px solid black;" data-ng-show="!controller.chamado">
+			<table>
+				<tr>
+					<th width="5%">ID</th>
+					<th>NOME</th>
+					<th>RUA</th>
+					<th>NUMERO</th>
+					<th>BAIRRO</th>
+					<th>CIDADE</th>
+					<th>UF</th>
+					<th>CELULAR</th>
+					<th>TELEFONE</th>
+					<th></th>
+				</tr>
+				<tr data-ng-repeat="dadosPessoa in controller.chamados">
+					<td>{{dadosPessoa.idPessoa}}</td>
+					<td>{{dadosPessoa.nomPessoa}}</td>
+					<td>{{dadosPessoa.endRua}}</td>
+					<td>{{dadosPessoa.endNumero}}</td>
+					<td>{{dadosPessoa.endBairro}}</td>
+					<td>{{dadosPessoa.endCidade}}</td>
+					<td>{{dadosPessoa.endUF}}</td>
+					<td>{{dadosPessoa.endCelular}}</td>
+					<td>{{dadosPessoa.endTelefone}}</td>
+					<td>
+						<button type="button" class="edit-button" data-ng-click="controller.alterar(dadosPessoa)">Alterar</button>
+						<button type="button" class="delete-button" data-ng-click="controller.deletar(dadosPessoa)">Deletar</button>
+						<button type="button" class="yellow-button" data-ng-click="controller.pesquisar(dadosPessoa)">Selecionar</button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="10" style="text-align: center"> <button type="button" class="green-button" data-ng-click="controller.novo()">Incluir nova Pessoa</button></td>
+				</tr>
+			</table>
+			<br>
+			<br>
+		</div>
+
+		<br>
+		<br>
+		<br>
+
+		<div style="border: 0px solid black;" data-ng-show="controller.chamado2">
+
+			<table style="width:100%">
+				<tr><td colspan="2">Dados da Pessoa Selecionada</td></tr>
+				<tr>
+					<td style="width:7%"><label for="idPessoa">ID:</label></td>
+					<td><input type="number" id="idPessoa" data-ng-model="controller.chamado2.idPessoa" disabled></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="nomPessoa">Nome:</label></td>
+					<td><input type="text" id="nomPessoa" data-ng-model="controller.chamado2.nomPessoa" disabled></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endRua">Rua:</label></td>
+					<td><input type="text" id="endRua" data-ng-model="controller.chamado2.endRua" disabled></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endNumero">Número:</label></td>
+					<td><input type="text" id="endNumero" data-ng-model="controller.chamado2.endNumero" disabled></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endBairro">Bairro:</label></td>
+					<td><input size="50" type="text" id="endBairro" data-ng-model="controller.chamado2.endBairro" disabled></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endCidade">Cidade:</label></td>
+					<td><input size="50" type="text" id="endCidade" data-ng-model="controller.chamado2.endCidade" disabled></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endUF">UF:</label></td>
+					<td><input size="5" type="text" id="endUF" data-ng-model="controller.chamado2.endUF" disabled></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endCelular">Celular:</label></td>
+					<td><input size="30" type="text" id="endCelular" data-ng-model="controller.chamado2.endCelular" disabled></td>
+				</tr>
+				<tr>
+					<td style="width:7%"><label for="endTelefone">Telefone:</label></td>
+					<td><input size="30" type="text" id="endTelefone" data-ng-model="controller.chamado2.endTelefone" disabled></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button class="delete-button" type="button" data-ng-click="controller.voltar()">Fechar</button>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+		</div>
+	
+	</div>
+
+</body>
+</html>
